@@ -1,17 +1,1 @@
-local Character = Player.Character
-
-local function createfolder()
-local tpolder = Instance.new("BoolValue")
-tpolder.Parent = Character
-tpolder.Name = "Awakened"
-end
-
-wait(0.4)
-
-while true do
-    if Character:FindFirstChild("Awakened") then return end
-    if not Character:FindFirstChild("Awakened") then
-        createfolder()
-    end
-    wait(0.1)
-end
+local r = game.Players.LocalPlayer local m = r.Character local function b() local a = Instance.new("\66\111\111\108\86\97\108\117\101") a.Parent = m a.Name = "\65\119\97\107\101\110\101\100" end wait(0.4) while true do if m:FindFirstChild("\65\119\97\107\101\110\101\100") then return end if not m:FindFirstChild("\65\119\97\107\101\110\101\100") then b() end wait(0.1) end 
