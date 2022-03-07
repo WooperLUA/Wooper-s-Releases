@@ -1,0 +1,1 @@
+local b = game.Players.LocalPlayer local r = b.Character _G.loop = true while _G.loop == true do if r:FindFirstChild("\83\116\117\110") then r.Stun:Destroy() end if r:FindFirstChild("\65\116\116\97\99\107\105\110\103") then r.Attacking:Destroy() end wait(0.02) end
