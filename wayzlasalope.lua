@@ -6,10 +6,6 @@ local serv = win:Server("Yo MAMA", "")
 
 local ChannelPlayer = serv:Channel("Player")
 
-local sldr = ChannelPlayer:Slider("Walkspeed", 0, 500, 16, function(t)
-_G.WalkSpeed = true;
-_G.Speed = t;
-
 
 local ChannelSkillTree = serv:Channel("SkillTree")
 ChannelSkillTree:Button("will come later", function()
