@@ -10,45 +10,6 @@ local sldr = ChannelPlayer:Slider("Walkspeed", 0, 500, 16, function(t)
 _G.WalkSpeed = true;
 _G.Speed = t;
 
-local mt = getrawmetatable(game)
-local old = mt.__newindex
-setreadonly(mt, false)
-
-mt.__newindex = newcclosure(function(t,k,v)
-    pcall(function()
-        if t == game:GetService("Players").LocalPlayer.Character.Humanoid and k == "WalkSpeed" and _G.WalkSpeed then
-            v = _G.Speed;
-        end
-    end)
-    return old(t,k,v)
-end)
-end)
-
-ChannelPlayer:Button("Reset Speed", function()
-sldr:Change(16)
-end)
-
-local sldr = ChannelPlayer:Slider("JumpPower", 0, 500, 50, function(t)
-_G.Jump = true;
-_G.JumpHeight = t;
-
-local mt = getrawmetatable(game)
-local old = mt.__newindex
-setreadonly(mt, false)
-
-mt.__newindex = newcclosure(function(t,k,v)
-    pcall(function()
-        if t == game:GetService("Players").LocalPlayer.Character.Humanoid and k == "JumpPower" and _G.Jump then
-            v = _G.JumpHeight;
-        end
-    end)
-    return old(t,k,v)
-end)
-end)
-
-ChannelPlayer:Button("Reset JumpPower", function()
-sldr:Change(50)
-end)
 
 local ChannelSkillTree = serv:Channel("SkillTree")
 ChannelSkillTree:Button("will come later", function()
