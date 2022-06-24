@@ -269,6 +269,20 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
 
+ChannelItems:Button("Item ESP", function()
+	local EzESP = loadstring(game:HttpGetAsync("https://pastebin.com/raw/r5xK0qCP"))()
+while wait(15) do
+   for i,v in pairs(game:GetService("Workspace")["Item_Spawns"].Items:GetDescendants()) do
+       local ch = v:GetChildren()
+       if #ch > 3 then
+           EzESP.Tracer(v.MeshPart,Color3.fromRGB(0,0,255),3)
+       elseif v:IsA("MeshPart") and v.MeshId == "rbxassetid://7218405255" then
+           EzESP.Tracer(v,Color3.fromRGB(255,0,0),3)
+       end
+   end
+end	
+end)
+
 local ChannelFarm = serv:Channel("Farming")
 
 ChannelFarm:Toggle("Auto-Farm",false, function(state)
