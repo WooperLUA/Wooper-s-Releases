@@ -1,0 +1,1 @@
+local o = game:GetService("\80\108\97\121\101\114\115").LocalPlayer; local j = o.Character.HumanoidRootPart local n = o.Stats.Mode local d = game.Workspace.Mape.Part.Script local g = d.Parent _G.woopyloop = true while _G.woopyloop do if  n.Value < 300 then g.CanCollide = false g.Transparency = 1 g.CFrame = j.CFrame g.Anchored = true end wait() end
